@@ -7,6 +7,9 @@ import json
 import os
 import sys
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 # read environment variables
 elasticsearch_host = os.getenv("ELASTICSEARCH_HOST", "elasticsearch:9200")
 retention_days = int(os.getenv("RETENTION_DAYS", "14"))
