@@ -84,7 +84,7 @@ def main():
         if len(valid) == 0:
             log("error", "The current index name settings yield no index names to retain")
             sys.exit(1)
-        for index in valid
+        for index in valid:
             log("info", "Retain index %s" % index)
 
         try:
